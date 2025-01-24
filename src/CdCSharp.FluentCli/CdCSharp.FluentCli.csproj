@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<PackageId>CdCSharp.FluentCli</PackageId>
+		<Description>A Fluent CLI Command manager.</Description>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<Authors>Samuel Maícas (CdCSharp)</Authors>
+		<Company>smaicas</Company>
+		<PackageProjectUrl></PackageProjectUrl>
+		<RepositoryUrl>https://github.com/smaicas/CdCSharp.FluentCli</RepositoryUrl>
+
+		<LangVersion>Latest</LangVersion>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<IsPackable>true</IsPackable>
+		<Configurations>Debug;Release;Integration</Configurations>
+		<Title>CdCSharp FluentCli</Title>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>Git</RepositoryType>
+		<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+		<PackageIcon>logo.png</PackageIcon>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="CdCSharp.FluentCli.UnitTests" />
+	</ItemGroup>
+
+</Project>
