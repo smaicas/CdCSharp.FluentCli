@@ -13,7 +13,7 @@ public static async Task Main(string[] args)
 {
     try
     {
-        Cli cli = new Cli()
+        FCli cli = new FCli()
            .WithDescription("CLI Tool")
            .WithErrorHandler(ex => Console.WriteLine(ex.Message))
            .Command<ThemeArgs>("command1")
@@ -39,7 +39,31 @@ public static async Task Main(string[] args)
     {
         Console.WriteLine(ex.Message);
     }
+}
 
+public class ThemeArgs
+{
+    [Arg("path", "Root folder", "p")]
+    public string Path { get; set; } = ".";
+
+    [Arg("output", "Output folder", "o")]
+    public string Output { get; set; } = "wwwroot";
+
+    [Arg("file", "Output filename", "f")]
+    public string File { get; set; } = "theme.css";
+}
+
+public class VariablesArgs
+{
+    [Arg("path", "Root folder", "p")]
+    public string Path { get; set; } = ".";
+
+    [Arg("output", "Output folder", "o")]
+    public string Output { get; set; } = "wwwroot";
+
+    [Arg("file", "Output filename", "f")]
+    public string File { get; set; } = "variables.css";
+}
 ```
 
 
